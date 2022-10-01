@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://anjas:anjas@localhost:27017/eduwork-mongoose?authSource=admin');
+mongoose.connect('mongodb+srv://moronesia:SaY1huwI0oltewAq@cluster0.pvgkrjj.mongodb.net/?retryWrites=true&w=majority');
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error: '));
