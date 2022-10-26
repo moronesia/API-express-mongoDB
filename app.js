@@ -4,7 +4,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const port = process.env.PORT || 3001;
+
 
 
 var indexRouter = require('./routes/index');
@@ -30,7 +30,7 @@ app.use('/api/v3/products', productsRouterV3);
 app.use('/api/v4/products', productsRouterV4);
 
 
-app.listen(port, () => {
-    console.log("server at http://localhost:3001")
-})
+app.listen(process.env.PORT || 3003, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
 module.exports = app;
